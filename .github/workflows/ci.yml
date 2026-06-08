@@ -1,0 +1,40 @@
+# ─────────────────────────────────────────────────────────────
+# CI（持續整合）pipeline
+# 每次 push 到 main 或開 PR 時，GitHub 會自動跑這份流程：
+#   1. 取得程式碼   2. 安裝套件   3. Lint   4. 測試   5. Build
+# 任何一步失敗，PR 上會顯示紅色 ✗，提醒你先別合併。
+# ─────────────────────────────────────────────────────────────
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: Lint · Test · Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 取得程式碼
+        uses: actions/checkout@v4
+
+      - name: 安裝 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: 安裝相依套件
+        run: npm ci
+
+      - name: 程式碼風格檢查 (ESLint)
+        run: npm run lint
+
+      - name: 執行單元測試 (Vitest)
+        run: npm test
+
+      - name: 建置 (Vite build)
+        run: npm run build
