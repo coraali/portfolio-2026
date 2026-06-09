@@ -1,4 +1,4 @@
-import { profile } from '../data/resume'
+import { profile } from "../data/resume";
 
 export default function Hero() {
   return (
@@ -14,7 +14,7 @@ export default function Hero() {
 
         <div className="hero__actions">
           <a href="#projects" className="btn btn--primary">
-            看我的專案
+            看專案
           </a>
           <a href="#contact" className="btn btn--ghost">
             聯絡我
@@ -26,5 +26,5 @@ export default function Hero() {
         <span className="hero__scroll-dot" />
       </a>
     </section>
-  )
+  );
 }

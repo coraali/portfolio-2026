@@ -3,17 +3,21 @@
    深 / 淺色都靠這組 CSS 變數切換，改色票只要動這裡。
    ============================================================ */
 :root {
-  --accent: #4f46e5;
-  --accent-hover: #4338ca;
-  --accent-soft: rgba(79, 70, 229, 0.1);
+  /* 淺色主題：Light Blue & Sunny（天藍＋金黃，活力朝氣） */
+  --accent: #0a6f8d; /* 深天藍：文字、連結、時間軸標記、導覽底線 */
+  --accent-warm: #ffd14c; /* 色票金黃：按鈕、標籤、標題底線等亮點 */
+  --accent-warm-hover: #ffe485;
+  --accent-warm-soft: rgba(255, 209, 76, 0.30); /* 陽光黃淡霧：技能標籤底 */
+  --accent-soft: rgba(155, 231, 250, 0.34); /* #9BE7FA 天藍淡霧：hero 漸層、卡片 */
+  --accent-contrast: #243a45; /* 疊在金黃填色上的深色文字 */
 
-  --bg: #ffffff;
-  --surface: #f8fafc;
-  --surface-2: #f1f5f9;
-  --text: #0f172a;
-  --text-muted: #64748b;
-  --border: #e2e8f0;
-  --shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 8px 24px rgba(15, 23, 42, 0.05);
+  --bg: #fbfeff;
+  --surface: #e3f5fb; /* 淡天藍，交錯區塊底色 */
+  --surface-2: #fff2cc; /* 淡陽光黃，小標籤底 */
+  --text: #243a45; /* 深墨藍，對比清晰 */
+  --text-muted: #51707c;
+  --border: #d6e7ee;
+  --shadow: 0 1px 3px rgba(36, 58, 69, 0.07), 0 8px 24px rgba(36, 58, 69, 0.07);
 
   --max-width: 920px;
   --radius: 14px;
@@ -26,17 +30,21 @@
 }
 
 [data-theme='dark'] {
-  --accent: #818cf8;
-  --accent-hover: #a5b4fc;
-  --accent-soft: rgba(129, 140, 248, 0.14);
+  /* 深色主題：Blue & Gold（深海軍藍＋古銅金，沉穩奢華） */
+  --accent: #cbab66; /* 亮金：文字、連結、時間軸標記、導覽底線 */
+  --accent-warm: #bf9a4c; /* 古銅金：按鈕、標籤、標題底線 */
+  --accent-warm-hover: #d4b878;
+  --accent-warm-soft: rgba(137, 111, 61, 0.34); /* #896f3d 金色淡霧：技能標籤底 */
+  --accent-soft: rgba(137, 111, 61, 0.28); /* 金色淡霧：hero 漸層、卡片 */
+  --accent-contrast: #102134; /* 疊在金色填色上的深海軍藍文字 */
 
-  --bg: #0f172a;
-  --surface: #1e293b;
-  --surface-2: #243049;
-  --text: #e2e8f0;
-  --text-muted: #94a3b8;
-  --border: #334155;
-  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.35);
+  --bg: #102134; /* 色票最深海軍藍 */
+  --surface: #1a293f; /* 海軍藍，交錯區塊／卡片 */
+  --surface-2: #28384f; /* 小標籤底 */
+  --text: #e8ebf1;
+  --text-muted: #97a3b6;
+  --border: #2c3c54;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 14px 36px rgba(0, 0, 0, 0.5);
 }
 
 /* ============================================================
@@ -106,8 +114,8 @@ ol {
   left: -999px;
   top: 0;
   z-index: 200;
-  background: var(--accent);
-  color: #fff;
+  background: var(--text);
+  color: var(--bg);
   padding: 0.6rem 1rem;
   border-radius: 0 0 var(--radius-sm) 0;
 }
@@ -161,11 +169,11 @@ ol {
   transform: translateY(-2px);
 }
 .btn--primary {
-  background: var(--accent);
-  color: #fff;
+  background: var(--accent-warm);
+  color: var(--accent-contrast);
 }
 .btn--primary:hover {
-  background: var(--accent-hover);
+  background: var(--accent-warm-hover);
 }
 .btn--ghost {
   background: transparent;
@@ -183,7 +191,7 @@ ol {
 .tag {
   display: inline-block;
   padding: 0.35rem 0.75rem;
-  background: var(--accent-soft);
+  background: var(--accent-warm-soft);
   color: var(--accent);
   border-radius: 999px;
   font-size: 0.85rem;
@@ -200,8 +208,8 @@ ol {
   padding: 0.15rem 0.6rem;
   font-size: 0.72rem;
   font-weight: 600;
-  background: var(--accent);
-  color: #fff;
+  background: var(--accent-warm);
+  color: var(--accent-contrast);
   border-radius: 999px;
   vertical-align: middle;
 }
@@ -458,6 +466,15 @@ ol {
 .section__title {
   font-size: clamp(1.7rem, 5vw, 2.3rem);
   margin: 0;
+}
+.section__title::after {
+  content: '';
+  display: block;
+  width: 44px;
+  height: 3px;
+  margin-top: 0.7rem;
+  border-radius: 2px;
+  background: var(--accent-warm); /* 標題下的金黃／古銅金底線 */
 }
 
 /* ============================================================
