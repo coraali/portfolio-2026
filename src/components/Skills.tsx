@@ -1,10 +1,14 @@
-import { skillGroups } from '../data/resume'
-import Section from './Section'
-import Reveal from './Reveal'
+import { useTranslation } from "react-i18next";
+import { useResume } from "../hooks/useResume";
+import Section from "./Section";
+import Reveal from "./Reveal";
 
 export default function Skills() {
+  const { t } = useTranslation();
+  const { skillGroups } = useResume();
+
   return (
-    <Section id="skills" eyebrow="Skills" title="技能">
+    <Section id="skills" eyebrow="Skills" title={t("sections.skills")}>
       <div className="skills">
         {skillGroups.map((group, i) => (
           <Reveal key={group.category} delay={i * 80} className="skill-card">
@@ -21,5 +25,5 @@ export default function Skills() {
         ))}
       </div>
     </Section>
-  )
+  );
 }

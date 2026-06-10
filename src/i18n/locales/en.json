@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "ctaProjects": "See my work",
+    "ctaContact": "Get in touch",
+    "scroll": "Scroll down"
+  },
+  "sections": {
+    "about": "About Me",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Featured Projects",
+    "contact": "Get in Touch"
+  },
+  "about": {
+    "roleLabel": "Current role",
+    "roleValue": "Frontend Developer",
+    "stackLabel": "Main stack",
+    "stackValue": "Vue 2 / 3, Nuxt, Pinia",
+    "locationLabel": "Location",
+    "locationValue": "Taiwan",
+    "statusLabel": "Status",
+    "statusValue": "Open to opportunities"
+  },
+  "experience": {
+    "current": "Current"
+  },
+  "projects": {
+    "featuredFlag": "You're looking at it",
+    "livePreview": "Live preview ↗",
+    "source": "Source ↗"
+  },
+  "contact": {
+    "lead": "I'm currently open to new frontend opportunities — feel free to reach out and I'll get back to you soon.",
+    "resumePdf": "Download résumé (PDF)"
+  },
+  "footer": {
+    "note": "Built with React + Vite · Deployed on Vercel"
+  },
+  "nav_aria": "Main menu",
+  "menu": {
+    "open": "Open menu",
+    "close": "Close menu"
+  }
+}

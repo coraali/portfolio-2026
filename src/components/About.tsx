@@ -1,13 +1,17 @@
-import { profile } from '../data/resume'
-import Section from './Section'
-import Reveal from './Reveal'
+import { useTranslation } from "react-i18next";
+import { useResume } from "../hooks/useResume";
+import Section from "./Section";
+import Reveal from "./Reveal";
 
 export default function About() {
+  const { t } = useTranslation();
+  const { about } = useResume();
+
   return (
-    <Section id="about" eyebrow="About" title="關於我">
+    <Section id="about" eyebrow="About" title={t("sections.about")}>
       <div className="about">
         <Reveal className="about__text">
-          {profile.about.map((paragraph, i) => (
+          {about.map((paragraph, i) => (
             <p key={i}>{paragraph}</p>
           ))}
         </Reveal>
@@ -15,24 +19,24 @@ export default function About() {
         <Reveal delay={120} className="about__facts">
           <dl>
             <div className="about__fact">
-              <dt>現職</dt>
-              <dd>Frontend Developer</dd>
+              <dt>{t("about.roleLabel")}</dt>
+              <dd>{t("about.roleValue")}</dd>
             </div>
             <div className="about__fact">
-              <dt>主力技術</dt>
-              <dd>Vue 2 / 3、Nuxt、Pinia</dd>
+              <dt>{t("about.stackLabel")}</dt>
+              <dd>{t("about.stackValue")}</dd>
             </div>
             <div className="about__fact">
-              <dt>地點</dt>
-              <dd>{profile.location}</dd>
+              <dt>{t("about.locationLabel")}</dt>
+              <dd>{t("about.locationValue")}</dd>
             </div>
             <div className="about__fact">
-              <dt>狀態</dt>
-              <dd>開放新機會</dd>
+              <dt>{t("about.statusLabel")}</dt>
+              <dd>{t("about.statusValue")}</dd>
             </div>
           </dl>
         </Reveal>
       </div>
     </Section>
-  )
+  );
 }

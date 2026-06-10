@@ -1,20 +1,26 @@
-import { projects } from '../data/resume'
-import Section from './Section'
-import Reveal from './Reveal'
+import { useTranslation } from "react-i18next";
+import { useResume } from "../hooks/useResume";
+import Section from "./Section";
+import Reveal from "./Reveal";
 
 export default function Projects() {
+  const { t } = useTranslation();
+  const { projects } = useResume();
+
   return (
-    <Section id="projects" eyebrow="Projects" title="代表性專案">
+    <Section id="projects" eyebrow="Projects" title={t("sections.projects")}>
       <div className="projects">
         {projects.map((project, i) => (
           <Reveal key={project.title} delay={i * 80}>
             <article
               className={`project-card${
-                project.featured ? ' project-card--featured' : ''
+                project.featured ? " project-card--featured" : ""
               }`}
             >
               {project.featured && (
-                <span className="project-card__flag">你正在看的網站</span>
+                <span className="project-card__flag">
+                  {t("projects.featuredFlag")}
+                </span>
               )}
               <h3 className="project-card__title">{project.title}</h3>
               <p className="project-card__desc">{project.description}</p>
@@ -31,12 +37,12 @@ export default function Projects() {
                 <div className="project-card__links">
                   {project.link && (
                     <a href={project.link} target="_blank" rel="noreferrer">
-                      線上預覽 ↗
+                      {t("projects.livePreview")}
                     </a>
                   )}
                   {project.repo && (
                     <a href={project.repo} target="_blank" rel="noreferrer">
-                      原始碼 ↗
+                      {t("projects.source")}
                     </a>
                   )}
                 </div>
@@ -46,5 +52,5 @@ export default function Projects() {
         ))}
       </div>
     </Section>
-  )
+  );
 }
