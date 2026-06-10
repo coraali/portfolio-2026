@@ -22,8 +22,8 @@ const zh: ResumeContent = {
   tagline: "今天你也Coding了嗎？",
   about: [
     "資訊科技與管理學系畢業，多年活動企劃與專案管理實務經驗。",
-    "後轉職前端工程師，主力以 Vue 生態系開發，專注於前後台系統開發、擅長功能實作、頁面還原與跨裝置體驗優化。",
-    "擅長獨立解決問題、快速掌握新工具，同時擁有跨部門溝通、產品設計思維與危機處理能力。",
+    "後轉職前端工程師，主力以 Vue 生態系開發，專注於產品前後台系統開發、功能實作、頁面還原與體驗優化。",
+    "擅長獨立解決問題、快速學習新工具，同時擁有跨部門溝通、產品設計思維與危機處理能力。",
     "喜歡發想、挑戰不同事物，期許自己持續精進技術，同時保持好奇心與學習熱忱。",
   ],
   skillGroups: [
@@ -34,21 +34,30 @@ const zh: ResumeContent = {
     },
     {
       category: "語言與基礎",
-      items: ["JavaScript", "TypeScript", "HTML", "CSS", "RWD 響應式設計", "jQuery"],
+      items: [
+        "JavaScript",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "RWD 響應式設計",
+        "jQuery",
+      ],
     },
     {
       category: "工具與工程",
       note: "版本控制、測試與協作",
-      items: ["Vite", "Git / GitHub", "Jest", "RESTful API", "WebSocket", "AI 編程工具 (Codex)"],
+      items: [
+        "Vite",
+        "Git / GitHub / GitLab",
+        "Jest",
+        "RESTful API",
+        "WebSocket",
+        "GitHub Copilot、Claude Code",
+      ],
     },
     {
       category: "設計工具",
       items: ["Photoshop", "Illustrator", "Word / PowerPoint / Excel"],
-    },
-    {
-      category: "正在學習",
-      note: "這個作品集網站就是用 React 打造的",
-      items: ["React", "CI/CD (GitHub Actions)"],
     },
   ],
   experiences: [
@@ -58,13 +67,14 @@ const zh: ResumeContent = {
       period: "2025/08 – 現在",
       current: true,
       summary:
-        "回任前端開發團隊，負責產品前後台的前端開發與維護，以 Vue 為主要框架，專注功能實作、頁面還原與跨裝置體驗優化。",
+        "回任前端開發團隊，負責產品前後台的前端開發與維護，以 Vue 為主要框架，專注於功能實作、頁面還原與體驗優化。",
       highlights: [
-        "使用 Vue 2 / Vue 3（含 Nuxt.js SSR）開發與維護前端功能，參與 Vue 2 向 Vue 3 的專案適配與測試。",
+        "使用 Vue 2 / Vue 3（含 Nuxt.js SSR）開發與維護前端功能。",
         "負責響應式網頁（RWD）開發，處理跨裝置、跨瀏覽器相容性問題。",
-        "串接 RESTful API 與 WebSocket，完成即時資料與互動功能。",
-        "撰寫單元測試（Jest）並修復前端 bug，以 unit test + CI / PR review 流程維持程式碼品質。",
-        "導入 AI 編程工具（Codex）協助搜尋範例、產出程式片段與重構建議，提升除錯與撰寫測試效率。",
+        "串接 API，完成即時資料與互動功能。",
+        "穩定交付多項前端功能迭代，配合 designer 與後端完成需求落地。",
+        "使用 Git / GitHub 進行版本控制與多人協作（PR、branch workflow）。",
+        "採用 AI 工具（Copilot、Claude Code）輔助尋找範例、生成程式碼片段與建議重構，提高除錯與測試撰寫效率。",
       ],
       tags: ["Vue 3", "Nuxt", "Pinia", "Jest", "RWD", "WebSocket"],
     },
@@ -143,29 +153,62 @@ const zh: ResumeContent = {
     {
       title: "本作品集網站",
       description:
-        "你正在看的這個網站。使用 React + Vite + TypeScript 從零打造，含深淺色切換、i18n 中英雙語、scroll-reveal 進場動畫與完整 RWD，並透過 GitHub Actions 自動跑測試、Vercel 自動部署。",
+        "使用 React + Vite + TypeScript 開發，含深淺色切換、i18n 語系切換、RWD，並透過 GitHub Actions 自動跑測試、Vercel 自動部署。",
       tags: ["React", "Vite", "TypeScript", "i18n", "CI/CD"],
       featured: true,
-      // TODO：填入此 repo 的 GitHub 網址
-      repo: "",
+      repo: "https://github.com/coraali/portfolio-2026",
     },
     {
-      title: "Vue 2 → Vue 3 專案遷移",
+      title: "黑嘉嘉圍棋教室",
       description:
-        "參與既有產品由 Vue 2 升級至 Vue 3 的適配與測試，處理 Composition API 改寫、相依套件相容性與回歸測試，確保功能在升級後維持穩定。",
-      tags: ["Vue 2", "Vue 3", "Migration", "Jest"],
+        "圍棋線上教學跨平台 App 前端開發，使用 Vue 2 + Vuex + Capacitor 以單一程式碼庫交付 Web / iOS / Android 三端；參與多項功能模組（課程、AI 對弈、即時對戰、天梯排位、個人選單、模擬檢定、師生管理等）的開發與維護，並以 Socket.io 實作即時互動、vue-i18n 支援多國國語系。",
+      tags: [
+        "Vue 2",
+        "Vuex",
+        "Vue Router",
+        "WebSocket",
+        "vue-i18n",
+        "SCSS / Bootstrap-Vue",
+        "Jest",
+        "Serverless API 串接",
+      ],
+      website: "https://app.heijiajia.com.tw/",
     },
     {
-      title: "金流與第三方登入串接",
+      title: "後台系統",
       description:
-        "實作 PayNow、WeChat Pay 金流流程，以及 Google、Apple 第三方登入（OAuth），串接後端 API 並處理各種付款與登入的邊界狀況。",
-      tags: ["PayNow", "WeChat Pay", "OAuth", "RESTful API"],
+        "以 Vue 3 + Element Plus 開發後台，參與帳號管理、視覺化銷售頁編輯器、電商商品與數據報表等多項業務模組的開發與維護；採用 auto-import 自動引入、AWS S3 上傳、callLambda Serverless API 等架構規範，維持大型專案的一致性與可維護性",
+      tags: [
+        "Vue 3",
+        "Composition API",
+        "Pinia",
+        "Element Plus",
+        "Vite",
+        "i18n",
+        "WebSocket",
+        "RESTful API",
+        "AWS S3",
+      ],
     },
     {
-      title: "即時互動功能",
+      title: "黑嘉嘉圍棋官方網站",
       description:
-        "以 WebSocket 完成即時資料更新與互動功能，並針對跨裝置、跨瀏覽器做相容性處理與體驗優化。",
-      tags: ["WebSocket", "RWD", "Vue"],
+        "公司對外官網由兩個前端專案組成，透過 Nginx 反向代理整合於同一網域：行銷／課程介紹站採 Nuxt 2 SSR 以利 SEO 與行銷追蹤；其他頁面採 Vue 2 SPA，提供會員、金流等功能。負責從需求拆解、UI 切版、API 串接的前端開發與維護，包含多語系、RWD、SEO meta 與行銷追蹤埋點（GA4 / GTM / Facebook Pixel）。",
+      tags: [
+        "Nuxt 2 (SSR)",
+        "Vue 2",
+        "Vuex",
+        "Vue Router",
+        "vue-i18n / @nuxtjs/i18n",
+        "Bootstrap Vue",
+        "SCSS",
+        "Swiper",
+        "GA4 / GTM / Facebook Pixel",
+        "SEO / OG meta",
+        "Nginx",
+        "RWD",
+      ],
+      website: "https://www.heijiajia.com.tw/",
     },
   ],
 };
@@ -177,10 +220,10 @@ const zh: ResumeContent = {
 const en: ResumeContent = {
   tagline: "Have you coded today?",
   about: [
-    "Graduated in Information Technology & Management, with several years of hands-on experience in event planning and project management.",
-    "Later transitioned into frontend engineering, working primarily in the Vue ecosystem on both customer-facing and admin systems — focused on feature implementation, pixel-perfect UI and cross-device experience.",
-    "Strong at solving problems independently and picking up new tools quickly, paired with cross-functional communication, product-design thinking and a level head under pressure.",
-    "I enjoy ideating and taking on new challenges, and I'm committed to keep sharpening my craft while staying curious and eager to learn.",
+    "I studied Information Technology & Management, with several years of hands-on experience in event planning and project management.",
+    "Later I moved into frontend engineering. I work mainly with Vue, building both the user-facing and admin sides of products — turning designs into working pages and improving the user experience.",
+    "I'm good at solving problems on my own and picking up new tools quickly, and I bring cross-team communication, a product-design mindset, and a calm way of handling unexpected issues.",
+    "I enjoy coming up with ideas and trying new things, and I want to keep improving my skills while staying curious and eager to learn.",
   ],
   skillGroups: [
     {
@@ -190,21 +233,30 @@ const en: ResumeContent = {
     },
     {
       category: "Languages & Fundamentals",
-      items: ["JavaScript", "TypeScript", "HTML", "CSS", "RWD (Responsive)", "jQuery"],
+      items: [
+        "JavaScript",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "RWD (Responsive)",
+        "jQuery",
+      ],
     },
     {
       category: "Tools & Engineering",
       note: "Version control, testing & collaboration",
-      items: ["Vite", "Git / GitHub", "Jest", "RESTful API", "WebSocket", "AI coding tools (Codex)"],
+      items: [
+        "Vite",
+        "Git / GitHub / GitLab",
+        "Jest",
+        "RESTful API",
+        "WebSocket",
+        "GitHub Copilot, Claude Code",
+      ],
     },
     {
       category: "Design Tools",
       items: ["Photoshop", "Illustrator", "Word / PowerPoint / Excel"],
-    },
-    {
-      category: "Currently Learning",
-      note: "This very portfolio is built with React",
-      items: ["React", "CI/CD (GitHub Actions)"],
     },
   ],
   experiences: [
@@ -216,11 +268,12 @@ const en: ResumeContent = {
       summary:
         "Rejoined the frontend team to build and maintain both customer-facing and admin products with Vue, focusing on feature delivery, faithful UI implementation and cross-device experience.",
       highlights: [
-        "Built and maintained frontend features with Vue 2 / Vue 3 (incl. Nuxt.js SSR), and took part in adapting and testing the Vue 2 → Vue 3 migration.",
+        "Built and maintained frontend features with Vue 2 / Vue 3 (incl. Nuxt.js SSR).",
         "Owned responsive (RWD) development, handling cross-device and cross-browser compatibility issues.",
-        "Integrated RESTful APIs and WebSocket to deliver real-time data and interactive features.",
-        "Wrote unit tests (Jest) and fixed frontend bugs, keeping code quality high through a unit-test + CI / PR-review workflow.",
-        "Adopted AI coding tools (Codex) to find examples, generate snippets and suggest refactors, improving debugging and test-writing efficiency.",
+        "Integrated APIs to deliver real-time data and interactive features.",
+        "Consistently shipped frontend feature iterations, working with designers and backend to land requirements.",
+        "Used Git / GitHub for version control and team collaboration (PRs, branch workflow).",
+        "Adopted AI tools (Copilot, Claude Code) to find examples, generate snippets and suggest refactors, improving debugging and test-writing efficiency.",
       ],
       tags: ["Vue 3", "Nuxt", "Pinia", "Jest", "RWD", "WebSocket"],
     },
@@ -230,7 +283,11 @@ const en: ResumeContent = {
       period: "2023/08 – 2025/08",
       summary:
         "Two years living and working abroad across different environments, building adaptability, cross-cultural communication and resilience.",
-      highlights: ["Beef factory packing", "Ski-resort restaurant front desk", "Bacon factory packing"],
+      highlights: [
+        "Beef factory packing",
+        "Ski-resort restaurant front desk",
+        "Bacon factory packing",
+      ],
       tags: ["Overseas experience", "English environment", "Resilience"],
     },
     {
@@ -300,28 +357,62 @@ const en: ResumeContent = {
     {
       title: "This Portfolio Website",
       description:
-        "The site you're looking at. Built from scratch with React + Vite + TypeScript, featuring light/dark themes, EN/ZH i18n, scroll-reveal animations and full RWD — with automated tests via GitHub Actions and auto-deploy on Vercel.",
+        "Built with React + Vite + TypeScript, featuring light/dark themes, i18n language switching and RWD — with automated tests via GitHub Actions and auto-deploy on Vercel.",
       tags: ["React", "Vite", "TypeScript", "i18n", "CI/CD"],
       featured: true,
-      repo: "",
+      repo: "https://github.com/coraali/portfolio-2026",
     },
     {
-      title: "Vue 2 → Vue 3 Migration",
+      title: "HJJ GO",
       description:
-        "Helped adapt and test an existing product's upgrade from Vue 2 to Vue 3 — rewriting to the Composition API, resolving dependency compatibility and running regression tests to keep features stable post-upgrade.",
-      tags: ["Vue 2", "Vue 3", "Migration", "Jest"],
+        "Frontend development for a cross-platform online Go-learning app, using Vue 2 + Vuex + Capacitor to ship Web / iOS / Android from a single codebase. Built and maintained many feature modules (courses, AI matches, real-time matches, ladder ranking, personal menu, mock certification, teacher–student management, and more), with real-time interaction via Socket.io and multi-language support via vue-i18n.",
+      tags: [
+        "Vue 2",
+        "Vuex",
+        "Vue Router",
+        "WebSocket",
+        "vue-i18n",
+        "SCSS / Bootstrap-Vue",
+        "Jest",
+        "Serverless API integration",
+      ],
+      website: "https://app.heijiajia.com.tw/",
     },
     {
-      title: "Payments & Third-party Login",
+      title: "HJJ GO(Admin System)",
       description:
-        "Implemented PayNow and WeChat Pay flows plus Google / Apple third-party login (OAuth), integrating backend APIs and handling the various edge cases of payment and sign-in.",
-      tags: ["PayNow", "WeChat Pay", "OAuth", "RESTful API"],
+        "Built an admin platform with Vue 3 + Element Plus, contributing to modules such as account management, a visual sales-page editor, e-commerce products and data reports. Followed architecture conventions like auto-import, AWS S3 uploads and callLambda serverless APIs to keep a large project consistent and maintainable.",
+      tags: [
+        "Vue 3",
+        "Composition API",
+        "Pinia",
+        "Element Plus",
+        "Vite",
+        "i18n",
+        "WebSocket",
+        "RESTful API",
+        "AWS S3",
+      ],
     },
     {
-      title: "Real-time Interactive Features",
+      title: "HJJ GO Official Website",
       description:
-        "Delivered real-time data updates and interactive features over WebSocket, with cross-device / cross-browser compatibility handling and experience tuning.",
-      tags: ["WebSocket", "RWD", "Vue"],
+        "The company's public site is made up of two frontend projects integrated under one domain via an Nginx reverse proxy: the marketing / course-intro site uses Nuxt 2 SSR for SEO and marketing tracking, while other pages use a Vue 2 SPA for members, payments and more. I handled frontend development and maintenance — from requirement breakdown and UI markup to API integration — including i18n, RWD, SEO meta and marketing tracking (GA4 / GTM / Facebook Pixel).",
+      tags: [
+        "Nuxt 2 (SSR)",
+        "Vue 2",
+        "Vuex",
+        "Vue Router",
+        "vue-i18n / @nuxtjs/i18n",
+        "Bootstrap Vue",
+        "SCSS",
+        "Swiper",
+        "GA4 / GTM / Facebook Pixel",
+        "SEO / OG meta",
+        "Nginx",
+        "RWD",
+      ],
+      website: "https://www.heijiajia.com.tw/",
     },
   ],
 };

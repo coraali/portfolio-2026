@@ -40,6 +40,8 @@ export interface Project {
   link?: string;
   /** 原始碼連結 */
   repo?: string;
+  /** 網站連結 */
+  website?: string;
   /** 標示這是「本網站」這類特別的卡片 */
   featured?: boolean;
 }

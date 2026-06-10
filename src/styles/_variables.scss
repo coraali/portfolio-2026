@@ -1,0 +1,25 @@
+// ─────────────────────────────────────────────
+// SCSS 變數（編譯時常數）與 mixin
+// 註：顏色不放這裡——深淺色主題用的是「執行時」的 CSS 自訂屬性
+//     （--accent 等，定義在 index.scss 的 :root / [data-theme]），
+//     Sass 的 $ 變數編譯後就固定、無法在執行時切換主題。
+// ─────────────────────────────────────────────
+
+// 響應式斷點
+$bp-tablet: 760px;
+$bp-mobile: 480px;
+
+// 用 @include respond(tablet) { ... } 取代手寫 media query
+@mixin respond($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (max-width: $bp-tablet) {
+      @content;
+    }
+  } @else if $breakpoint == mobile {
+    @media (max-width: $bp-mobile) {
+      @content;
+    }
+  } @else {
+    @error "Unknown breakpoint: #{$breakpoint}";
+  }
+}

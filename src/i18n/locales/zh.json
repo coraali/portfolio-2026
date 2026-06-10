@@ -21,13 +21,13 @@
   },
   "about": {
     "roleLabel": "現職",
-    "roleValue": "Frontend Developer",
+    "roleValue": "前端工程師",
     "stackLabel": "主力技術",
-    "stackValue": "Vue 2 / 3、Nuxt、Pinia",
+    "stackValue": "Vue 2 / 3、JavaScript",
     "locationLabel": "地點",
     "locationValue": "台灣",
     "statusLabel": "狀態",
-    "statusValue": "開放新機會"
+    "statusValue": "尋找新機會"
   },
   "experience": {
     "current": "現職"
@@ -35,7 +35,8 @@
   "projects": {
     "featuredFlag": "你正在看的網站",
     "livePreview": "線上預覽 ↗",
-    "source": "原始碼 ↗"
+    "source": "GitHub",
+    "website": "網站"
   },
   "contact": {
     "lead": "目前開放新的前端工作機會，歡迎透過以下方式聯絡，我會盡快回覆。",

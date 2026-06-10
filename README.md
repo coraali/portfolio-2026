@@ -54,11 +54,13 @@ npm test         # 跑單元測試
 
 ```
 src/
-├─ data/resume.ts      ← 所有履歷內容（最常改這裡）
+├─ data/resume.ts      ← 履歷內容（中英雙語）
+├─ i18n/               ← i18next 設定與 locales（介面文字）
 ├─ types.ts            ← 資料型別定義
-├─ hooks/              ← useTheme、useScrollReveal
+├─ hooks/              ← useTheme、useScrollReveal、useResume
 ├─ components/         ← 各區塊元件
 ├─ App.tsx             ← 組裝所有區塊
 ├─ main.tsx            ← 進入點
-└─ index.css           ← 全站樣式與設計變數
+├─ index.scss          ← 全站樣式（SCSS）＋ CSS 變數（主題切換）
+└─ styles/_variables.scss ← SCSS 變數與響應式 mixin
 ```

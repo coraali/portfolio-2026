@@ -23,11 +23,11 @@
     "roleLabel": "Current role",
     "roleValue": "Frontend Developer",
     "stackLabel": "Main stack",
-    "stackValue": "Vue 2 / 3, Nuxt, Pinia",
+    "stackValue": "Vue 2 / 3, JavaScript",
     "locationLabel": "Location",
     "locationValue": "Taiwan",
     "statusLabel": "Status",
-    "statusValue": "Open to opportunities"
+    "statusValue": "Looking for opportunities"
   },
   "experience": {
     "current": "Current"
@@ -35,11 +35,12 @@
   "projects": {
     "featuredFlag": "You're looking at it",
     "livePreview": "Live preview ↗",
-    "source": "Source ↗"
+    "source": "GitHub",
+    "website": "Website"
   },
   "contact": {
     "lead": "I'm currently open to new frontend opportunities — feel free to reach out and I'll get back to you soon.",
-    "resumePdf": "Download résumé (PDF)"
+    "resumePdf": "Download resume (PDF)"
   },
   "footer": {
     "note": "Built with React + Vite · Deployed on Vercel"
