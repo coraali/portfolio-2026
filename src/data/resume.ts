@@ -11,8 +11,7 @@ export const profile: Profile = {
   email: "love820522@gmail.com",
   linkedin: "https://www.linkedin.com/in/cora-li-53420a244/",
   github: "https://github.com/coraali",
-  // TODO：若想提供 PDF 履歷下載，把檔案放到 public/ 後填入路徑，例如 '/cora-li-resume.pdf'
-  resumePdf: "",
+  resumePdf: "/public/file/cora-li-resume.pdf",
 };
 
 // ─────────────────────────────────────────────────────────────

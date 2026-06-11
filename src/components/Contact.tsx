@@ -10,7 +10,8 @@ export default function Contact() {
     <Section id="contact" eyebrow="Contact" title={t("sections.contact")}>
       <Reveal className="contact">
         <p className="contact__lead">
-          <svg aria-hidden="true"
+          <svg
+            aria-hidden="true"
             width="20"
             height="20"
             viewBox="0 0 24 24"
@@ -29,7 +30,8 @@ export default function Contact() {
             </g>
           </svg>
           {t("contact.lead")}
-          <svg aria-hidden="true"
+          <svg
+            aria-hidden="true"
             width="20"
             height="20"
             viewBox="0 0 24 24"
@@ -54,7 +56,8 @@ export default function Contact() {
             href={`mailto:${profile.email}`}
             aria-label={profile.email}
           >
-            <svg aria-hidden="true"
+            <svg
+              aria-hidden="true"
               width="20"
               height="20"
               viewBox="0 0 24 24"
@@ -83,7 +86,8 @@ export default function Contact() {
             rel="noreferrer"
             aria-label="LinkedIn"
           >
-            <svg aria-hidden="true"
+            <svg
+              aria-hidden="true"
               width="20"
               height="20"
               viewBox="0 0 24 24"
@@ -114,7 +118,8 @@ export default function Contact() {
               rel="noreferrer"
               aria-label="GitHub"
             >
-              <svg aria-hidden="true"
+              <svg
+                aria-hidden="true"
                 width="20"
                 height="20"
                 viewBox="0 0 20 20"
@@ -165,8 +170,31 @@ export default function Contact() {
             </a>
           )}
           {profile.resumePdf && (
-            <a className="btn btn--ghost" href={profile.resumePdf} download>
-              {t("contact.resumePdf")}
+            <a
+              className="btn btn--ghost"
+              href={profile.resumePdf}
+              download
+              aria-label="download resume PDF"
+            >
+              <svg
+                aria-hidden="true"
+                width="20"
+                height="20"
+                fill="#000000"
+                viewBox="0 0 22 22"
+                xmlns="http://www.w3.org/2000/svg"
+                id="memory-download"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path d="M18 17V19H4V17H18M14 2V8H18V9H17V10H16V11H15V12H14V13H13V14H12V15H10V14H9V13H8V12H7V11H6V10H5V9H4V8H8V2H14M12 4H10V10H9V11H10V12H12V11H13V10H12V4Z"></path>
+                </g>
+              </svg>
             </a>
           )}
         </div>
