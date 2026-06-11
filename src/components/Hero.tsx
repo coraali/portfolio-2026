@@ -2,12 +2,6 @@ import { useTranslation } from "react-i18next";
 
 export default function Hero() {
   const { t } = useTranslation();
-  const skills = t("landing.skills", {
-    returnObjects: true,
-  }) as unknown as string[];
-  const personality = t("landing.personality", {
-    returnObjects: true,
-  }) as unknown as string[];
 
   return (
     <section id="top" className="poster">
