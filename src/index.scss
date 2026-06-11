@@ -757,6 +757,9 @@ ol {
   margin: 0 auto;
 }
 .contact__lead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--text-muted);
   margin-bottom: 1.8rem;
 }

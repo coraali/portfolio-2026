@@ -72,19 +72,19 @@ const zh: ResumeContent = {
         "使用 Vue 2 / Vue 3（含 Nuxt.js SSR）開發與維護前端功能。",
         "負責響應式網頁（RWD）開發，處理跨裝置、跨瀏覽器相容性問題。",
         "串接 API，完成即時資料與互動功能。",
-        "穩定交付多項前端功能迭代，配合 designer 與後端完成需求落地。",
+        "穩定交付多項前端功能迭代，配合PM、設計師與後端完成需求落地。",
         "使用 Git / GitHub 進行版本控制與多人協作（PR、branch workflow）。",
         "採用 AI 工具（Copilot、Claude Code）輔助尋找範例、生成程式碼片段與建議重構，提高除錯與測試撰寫效率。",
       ],
-      tags: ["Vue 3", "Nuxt", "Pinia", "Jest", "RWD", "WebSocket"],
+      tags: ["Vue", "Nuxt", "Pinia", "Vuex", "Jira", "JavaScript", "GitHub"],
     },
     {
       company: "澳洲打工度假",
       role: "背包客",
       period: "2023/08 – 2025/08",
       summary:
-        "兩年海外經歷，在不同環境中工作與生活，培養獨立適應力、跨文化溝通與抗壓能力。",
-      highlights: ["牛肉廠包裝", "雪山度假村餐廳前台", "培根場包裝"],
+        "把握最後機會前往澳洲，在不同環境中工作與生活兩年，培養獨立適應力、跨文化溝通與抗壓能力。",
+      highlights: ["語言學校", "各種工廠廠包裝", "雪山度假村餐廳前台"],
       tags: ["海外經歷", "英文環境", "抗壓"],
     },
     {
@@ -92,14 +92,22 @@ const zh: ResumeContent = {
       role: "Frontend Developer",
       period: "2020/11 – 2023/07",
       summary:
-        "首次任職期間（共 2 年 9 個月），奠定 Vue 開發基礎，以個人 contributor 為主，獨立完成功能開發與問題排查。",
+        "首次任職期間（共 2 年 9 個月），奠定 Vue 開發基礎，獨立完成功能開發與問題排查。",
       highlights: [
-        "參與金流串接（PayNow、WeChat Pay）與第三方登入（Google、Apple）功能實作。",
+        "基本前端技術，包含但不限於：Javascript,CSS/CSS3,HTML。",
+        "使用 Vue 2 開發與維護前端功能。",
+        "部門採用 Scrum 開發模式 ( jira )",
         "使用 Git / GitHub 進行版本控制與多人協作（PR、branch workflow）。",
-        "穩定交付多項前端功能迭代，配合 designer 與後端完成需求落地。",
+        "使用 MJML 來解決 Email 切版與 CSS 支援度的問題",
+        "全新專案撰寫單元測試 ( jest )。",
+        "金流串接 ( paynow、微信 )",
+        "使用 ECharts 將資訊圖表化",
+        "套件應用 wgo, lodash, bootstrap, element UI, moment.js, dayjs ...",
+        "技術研究、分享 ( vite、tauri )",
+        "穩定交付多項前端功能迭代，配合 PM、設計師與後端完成需求落地。",
         "擅長在既有流程下獨立解決問題、快速學習新工具。",
       ],
-      tags: ["Vue 2", "金流串接", "OAuth", "Git"],
+      tags: ["Vue", "Nuxt", "Vuex", "Jira", "JavaScript", "GitHub", "Jest"],
     },
     {
       company: "自然互動科技有限公司",
@@ -114,7 +122,7 @@ const zh: ResumeContent = {
       role: "創意企劃",
       period: "2018/08 – 2019/08",
       summary:
-        "於廣告後期製作公司（主要為遊戲類別）擔任創意企劃，公司自由度高，培養獨立思考與臨場反應。",
+        "於廣告後期製作公司（主要為遊戲項目）擔任創意企劃、執行製片，公司自由度高，培養獨立思考與臨場反應。",
       highlights: [
         "實拍／動畫腳本提案、文案發想。",
         "參與實際拍攝與製片工作。",
@@ -127,7 +135,7 @@ const zh: ResumeContent = {
       role: "線控副主任",
       period: "2017/06 – 2018/08",
       summary:
-        "於自由行部門擔任線控，負責成本控管、資源蒐集、商品設計、銷售與行銷等產品全流程。",
+        "於自由行部門擔任線控的職務，負責成本控管、資源蒐集、商品設計、銷售、廣告行銷、市場動態、教育訓練、客訴處理等與產品銷售相關之內容",
       highlights: [
         "負責線路產品設計、包裝、上架、銷售與維護，並進行成本計算與利潤控管。",
         "蒐集並維護航空公司、飯店、供應商等資源關係。",
@@ -140,7 +148,7 @@ const zh: ResumeContent = {
       role: "行銷企劃專員",
       period: "2015/07 – 2017/03",
       summary:
-        "於《英雄聯盟》校園推廣組擔任行銷企劃，負責校園電競賽事規劃、推廣與異業合作。",
+        "於英雄聯盟遊戲營運部校園推廣組擔任行銷企劃的職務，負責校園電競賽事規劃、推廣，業餘活動規劃與異業合作，公告及宣傳文案撰寫，開發尋找客戶（學生）並維持良好關係",
       highlights: [
         "撰寫線上活動網頁企劃，與設計、技術部門合作協助網頁上線與維護。",
         "參與官方年度賽事「校際盃」的賽事規劃、宣傳影片腳本與線上／線下執行。",
@@ -261,81 +269,89 @@ const en: ResumeContent = {
   ],
   experiences: [
     {
-      company: "Goer Technology",
+      company: "Goer",
       role: "Frontend Developer",
       period: "2025/08 – Present",
       current: true,
       summary:
-        "Rejoined the frontend team to build and maintain both customer-facing and admin products with Vue, focusing on feature delivery, faithful UI implementation and cross-device experience.",
+        "Rejoined the frontend team to build and maintain both customer-facing and admin products with Vue, focusing on feature delivery, building pages that match the designs, and cross-device experience.",
       highlights: [
         "Built and maintained frontend features with Vue 2 / Vue 3 (incl. Nuxt.js SSR).",
         "Owned responsive (RWD) development, handling cross-device and cross-browser compatibility issues.",
         "Integrated APIs to deliver real-time data and interactive features.",
-        "Consistently shipped frontend feature iterations, working with designers and backend to land requirements.",
+        "Consistently shipped frontend feature iterations, working with PMs, designers and the backend team to get requirements shipped.",
         "Used Git / GitHub for version control and team collaboration (PRs, branch workflow).",
         "Adopted AI tools (Copilot, Claude Code) to find examples, generate snippets and suggest refactors, improving debugging and test-writing efficiency.",
       ],
-      tags: ["Vue 3", "Nuxt", "Pinia", "Jest", "RWD", "WebSocket"],
+      tags: ["Vue", "Nuxt", "Pinia", "Vuex", "Jira", "JavaScript", "GitHub"],
     },
     {
       company: "Working Holiday in Australia",
-      role: "Working Holidaymaker",
+      role: "Backpacker",
       period: "2023/08 – 2025/08",
       summary:
-        "Two years living and working abroad across different environments, building adaptability, cross-cultural communication and resilience.",
+        "Took my last chance to head to Australia, living and working across different environments for two years — building adaptability, cross-cultural communication and resilience.",
       highlights: [
-        "Beef factory packing",
-        "Ski-resort restaurant front desk",
-        "Bacon factory packing",
+        "Language school",
+        "Packing at various factories",
+        "Ski-resort restaurant front of house",
       ],
       tags: ["Overseas experience", "English environment", "Resilience"],
     },
     {
-      company: "Goer Technology",
+      company: "Goer",
       role: "Frontend Developer",
       period: "2020/11 – 2023/07",
       summary:
-        "First tenure (2 yrs 9 mos) — laid my Vue foundation, working mainly as an individual contributor to deliver features and troubleshoot independently.",
+        "My first time at the company (2 yrs 9 mos) — built my Vue foundation and delivered features and fixes independently.",
       highlights: [
-        "Implemented payment integrations (PayNow, WeChat Pay) and third-party login (Google, Apple).",
+        "Solid frontend fundamentals: JavaScript, HTML, CSS / CSS3.",
+        "Built and maintained frontend features with Vue 2.",
+        "Worked in a Scrum team (Jira).",
         "Used Git / GitHub for version control and team collaboration (PRs, branch workflow).",
-        "Consistently shipped frontend feature iterations, working with designers and backend to land requirements.",
+        "Used MJML to handle HTML-email layout and CSS-compatibility issues.",
+        "Wrote unit tests (Jest) for new projects.",
+        "Payment integration (PayNow, WeChat Pay).",
+        "Turned data into charts with ECharts.",
+        "Worked with libraries such as wgo, lodash, Bootstrap, Element UI, moment.js and dayjs.",
+        "Researched and shared new tech internally (Vite, Tauri).",
+        "Consistently shipped frontend feature iterations, working with PMs, designers and the backend team to get requirements shipped.",
         "Skilled at solving problems independently within existing processes and learning new tools fast.",
       ],
-      tags: ["Vue 2", "Payments", "OAuth", "Git"],
+      tags: ["Vue", "Nuxt", "Vuex", "Jira", "JavaScript", "GitHub", "Jest"],
     },
     {
-      company: "Natural Interaction Technology",
+      company: "NaturalTEL",
       role: "Frontend Engineer",
       period: "2020/03 – 2020/11",
       summary:
-        "Worked on a Java-based project without a separated frontend/backend, mainly responsible for markup and styling.",
-      highlights: ["Built page markup and reproduced design mockups."],
+        "Worked on a Java-based project where the frontend and backend weren't separated; mainly handled HTML/CSS markup.",
+      highlights: ["Built pages from design mockups (HTML/CSS)."],
       tags: ["HTML", "CSS", "JavaScript", "jQuery"],
     },
     {
-      company: "Qiheng Creative Image",
+      company: "ICimage",
       role: "Creative Planner",
       period: "2018/08 – 2019/08",
       summary:
-        "Creative planner at a post-production studio (mainly gaming projects); a high-autonomy environment that sharpened independent thinking and quick response.",
+        "Creative planner and line producer at a post-production studio (mainly gaming projects); a high-autonomy environment that sharpened independent thinking and quick response.",
       highlights: [
-        "Pitched live-action / animation scripts and developed copy.",
+        "Pitched live-action / animation scripts and wrote copy.",
         "Took part in actual shoots and production work.",
         "Learned crew coordination, shoot planning and interpersonal skills.",
       ],
       tags: ["Planning", "Scriptwriting", "Production"],
     },
     {
-      company: "Hsihong Travel",
+      company: "Best Tour",
       role: "Deputy Product Supervisor",
       period: "2017/06 – 2018/08",
       summary:
-        "Product planning for the FIT (free independent travel) division — owning cost control, sourcing, product design, sales and marketing across the full product lifecycle.",
+        "Route planner in the FIT (free independent travel) division, responsible for cost control, sourcing, product design, sales, advertising and marketing, market analysis, staff training and customer-complaint handling — the full scope of product sales.",
       highlights: [
         "Owned route product design, packaging, listing, sales and maintenance, with cost calculation and margin control.",
         "Sourced and maintained relationships with airlines, hotels and suppliers.",
-        "Drove sales through B2B / B2C newsletters, DMs and the official site, adjusting strategy to market dynamics.",
+        "Drove sales through B2B / B2C newsletters, printed flyers and the official site, adjusting strategy to market trends.",
       ],
       tags: ["Product design", "Cost control", "Marketing"],
     },
@@ -344,7 +360,7 @@ const en: ResumeContent = {
       role: "Marketing Specialist",
       period: "2015/07 – 2017/03",
       summary:
-        "Marketing specialist on the League of Legends campus-outreach team, owning collegiate esports event planning, promotion and cross-brand partnerships.",
+        "Marketing specialist on the League of Legends campus-outreach team (game operations), responsible for collegiate esports event planning and promotion, amateur-event planning and cross-brand partnerships, writing announcements and promotional copy, and building lasting relationships with student communities.",
       highlights: [
         "Wrote online campaign-page plans and worked with design and engineering to launch and maintain pages.",
         "Contributed to the official annual 'Campus Cup' — event planning, promo video scripts and online/offline execution.",
@@ -397,7 +413,7 @@ const en: ResumeContent = {
     {
       title: "HJJ GO Official Website",
       description:
-        "The company's public site is made up of two frontend projects integrated under one domain via an Nginx reverse proxy: the marketing / course-intro site uses Nuxt 2 SSR for SEO and marketing tracking, while other pages use a Vue 2 SPA for members, payments and more. I handled frontend development and maintenance — from requirement breakdown and UI markup to API integration — including i18n, RWD, SEO meta and marketing tracking (GA4 / GTM / Facebook Pixel).",
+        "The company's public site is made up of two frontend projects integrated under one domain via an Nginx reverse proxy: the marketing / course-intro site uses Nuxt 2 SSR for SEO and marketing tracking, while other pages use a Vue 2 SPA for members, payments and more. I handled frontend development and maintenance — from breaking down requirements and building the UI to API integration — including i18n, RWD, SEO meta and marketing tracking (GA4 / GTM / Facebook Pixel).",
       tags: [
         "Nuxt 2 (SSR)",
         "Vue 2",
