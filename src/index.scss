@@ -838,3 +838,354 @@ ol {
     width: 100%;
   }
 }
+
+/* ============================================================
+   Landing — 雜誌／海報封面（HIRE ME）
+   文字直接疊在滿版照片上；放 public/cora.jpg 即套用照片。
+   海報文字色彩為固定值（疊在照片上需穩定可讀），不隨主題變。
+   ============================================================ */
+$poster-red: #ef3e36;
+$poster-orange: #f6972c;
+$poster-gold: #ffc62b;
+
+.poster {
+  position: relative;
+  min-height: calc(100svh - 30px);
+  display: flex;
+  overflow: hidden;
+  /* 沒有照片時的後備：藍天大海漸層 */
+  background: linear-gradient(155deg, #2f6f9c 0%, #74b9d8 55%, #b9e2ef 100%);
+}
+.poster__photo {
+  position: absolute;
+  inset: 0;
+  background-image: url("/img/cora.jpeg");
+  background-size: cover;
+  background-position: center center;
+  animation: posterZoom 20s ease-in-out infinite alternate;
+}
+.poster__scrim {
+  position: absolute;
+  inset: 0;
+  /* 淺色：不蓋蒙版，直接呈現明亮的照片 */
+  background: none;
+}
+
+/* 深色：加上壓暗蒙版，讓白／紅／金字在照片上更清楚，也帶出深淺切換的層次感 */
+[data-theme="dark"] .poster__scrim {
+  background:
+    linear-gradient(
+      100deg,
+      rgba(7, 22, 38, 0.6),
+      rgba(7, 22, 38, 0.2) 46%,
+      rgba(7, 22, 38, 0) 72%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(7, 22, 38, 0.28),
+      rgba(7, 22, 38, 0) 22%,
+      rgba(7, 22, 38, 0.42)
+    );
+}
+
+.poster__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: clamp(5rem, 5vw, 3.4rem) clamp(1.4rem, 4vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.poster__hireme {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 800;
+  line-height: 0.88;
+  letter-spacing: 0.02em;
+  color: #fff;
+  text-shadow: 0 2px 22px rgba(0, 0, 0, 0.28);
+  animation:
+    posterPop 0.7s var(--ease) both,
+    posterFloatY 5s ease-in-out 0.9s infinite;
+  svg {
+    width: clamp(3rem, 10vw, 5rem);
+    height: clamp(3rem, 10vw, 5rem);
+    &.poster__hireme-m {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.poster__body {
+  flex: 1;
+  margin-top: clamp(0.6rem, 1.6vw, 1.1rem);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  padding: clamp(1.2rem, 3.2vw, 2.2rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 0.8vw, 1.2rem);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+/* staggered 進場 */
+.poster__body > * {
+  animation: posterUp 0.6s var(--ease) both;
+}
+.poster__body > *:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.poster__body > *:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.poster__body > *:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.poster__body > *:nth-child(4) {
+  animation-delay: 0.5s;
+}
+.poster__body > *:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+.poster__together {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(0.8rem, 2.4vw, 1.1rem);
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: $poster-red;
+}
+.poster__name {
+  margin: 0;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  line-height: clamp(1.4rem, 4.4vw, 2.3rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: $poster-orange;
+}
+.poster__role {
+  margin-left: 0.6rem;
+  color: #fff;
+}
+.poster__apply {
+  display: flex;
+  flex-direction: column;
+  gap: 0 1rem;
+  margin: 0;
+}
+.poster__apply-text {
+  font-size: clamp(1.7rem, 6vw, 2rem);
+  font-weight: 800;
+  line-height: 1.02;
+  text-transform: uppercase;
+  color: $poster-gold;
+}
+.poster__apply-badge {
+  padding-left: 0.9rem;
+  border-left: 5px solid $poster-gold;
+  font-size: clamp(0.95rem, 2.6vw, 1.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: $poster-orange;
+}
+
+.poster__cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;
+  justify-content: space-between;
+  margin-top: 0.4rem;
+}
+.poster__group {
+  background: #ffffff3b;
+  padding: 4px;
+  min-width: 150px;
+}
+.poster__group--right {
+  text-align: right;
+}
+.poster__gt {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.1rem, 3.4vw, 1.5rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #243a45;
+}
+.poster__gt--alt {
+  color: $poster-orange;
+}
+.poster__list {
+  display: grid;
+  gap: 0.25rem;
+}
+.poster__list li {
+  font-size: clamp(0.95rem, 2.4vw, 1.15rem);
+  font-weight: 600;
+  color: #fff;
+  transition:
+    transform 0.2s var(--ease),
+    color 0.2s var(--ease);
+}
+.poster__list li:hover {
+  color: $poster-gold;
+  transform: translateX(4px);
+}
+.poster__list--right li:hover {
+  transform: translateX(-4px);
+}
+
+.poster__footer {
+  margin-top: auto;
+  padding-top: 1.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.poster__contact {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.6rem 0.9rem;
+  background: rgba(7, 22, 38, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-shadow: none;
+}
+.poster__contact-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $poster-gold;
+}
+.poster__contact a {
+  color: #fff;
+}
+.poster__closing {
+  flex: 1;
+  margin: 0;
+  text-align: right;
+  font-size: clamp(1.2rem, 4.4vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $poster-red;
+  animation: posterPulse 2.4s ease-in-out infinite;
+}
+
+.poster__scroll {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: 26px;
+  height: 42px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+.poster__scroll-dot {
+  width: 4px;
+  height: 8px;
+  border-radius: 999px;
+  background: $poster-gold;
+  animation: scrollDot 1.6s infinite;
+}
+
+@keyframes posterZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+@keyframes posterPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.84);
+  }
+  60% {
+    transform: scale(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes posterFloatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+@keyframes posterUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes posterPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.72;
+  }
+}
+
+@include respond(tablet) {
+  .poster__cols {
+    flex-direction: column;
+  }
+  .poster__group--right,
+  .poster__list--right {
+    text-align: left;
+  }
+  .poster__list--right li:hover {
+    transform: translateX(4px);
+  }
+  .poster__footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .poster__closing {
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .poster__photo,
+  .poster__hireme,
+  .poster__closing,
+  .poster__scroll-dot,
+  .poster__body > * {
+    animation: none;
+  }
+  .poster__body > * {
+    opacity: 1;
+    transform: none;
+  }
+}

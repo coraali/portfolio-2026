@@ -12,6 +12,34 @@
     "ctaContact": "聯絡我",
     "scroll": "往下捲動"
   },
+  "landing": {
+    "hireMe": "HIRE ME",
+    "together": "WE SHOULD WORK TOGETHER",
+    "intro": "嗨，我是 Cora，",
+    "role": "前端工程師",
+    "apply": "LOOKING FOR OPPORTUNITIES",
+    "openTo": "Vue · React · OPEN TO WORK",
+    "skillsTitle": "技能",
+    "skills": [
+      "Vue 2 / 3",
+      "JavaScript / TypeScript",
+      "RWD 響應式",
+      "RESTful API / WebSocket",
+      "Git / CI-CD",
+      "Html / CSS / Sass"
+    ],
+    "personalityTitle": "特質",
+    "personality": [
+      "積極主動",
+      "注重細節",
+      "團隊合作",
+      "創意力",
+      "保持好奇",
+      "樂於學習"
+    ],
+    "closing": "你不會失望的",
+    "cta": "看我的作品"
+  },
   "sections": {
     "about": "關於我",
     "skills": "技能",

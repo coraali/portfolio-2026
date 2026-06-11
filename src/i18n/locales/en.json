@@ -12,6 +12,34 @@
     "ctaContact": "Get in touch",
     "scroll": "Scroll down"
   },
+  "landing": {
+    "hireMe": "HIRE ME",
+    "together": "WE SHOULD WORK TOGETHER",
+    "intro": "Hi, I'm CORA,",
+    "role": "FRONTEND DEVELOPER",
+    "apply": "LOOKING FOR OPPORTUNITIES",
+    "openTo": "VUE · REACT · OPEN TO WORK",
+    "skillsTitle": "SKILLS",
+    "skills": [
+      "Vue 2 / 3",
+      "JavaScript / TypeScript",
+      "Responsive (RWD)",
+      "RESTful API / WebSocket",
+      "Git / CI-CD",
+      "i18n"
+    ],
+    "personalityTitle": "PERSONALITY",
+    "personality": [
+      "Energetic",
+      "Proactive",
+      "Friendly",
+      "Honest",
+      "Curious",
+      "Open-minded"
+    ],
+    "closing": "YOU WON'T BE DISAPPOINTED",
+    "cta": "See my work"
+  },
   "sections": {
     "about": "About Me",
     "skills": "Skills",

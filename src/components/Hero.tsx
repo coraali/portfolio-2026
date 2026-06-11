@@ -1,34 +1,159 @@
 import { useTranslation } from "react-i18next";
-import { profile } from "../data/resume";
-import { useResume } from "../hooks/useResume";
 
 export default function Hero() {
   const { t } = useTranslation();
-  const { tagline } = useResume();
+  const skills = t("landing.skills", {
+    returnObjects: true,
+  }) as unknown as string[];
+  const personality = t("landing.personality", {
+    returnObjects: true,
+  }) as unknown as string[];
 
   return (
-    <section id="top" className="hero">
-      <div className="container hero__inner">
-        <p className="hero__greeting">{t("hero.greeting")}</p>
-        <h1 className="hero__name">
-          {profile.name}
-          <span className="hero__name-en">{profile.nameEn}</span>
-        </h1>
-        <p className="hero__title">{profile.title}</p>
-        <p className="hero__tagline">{tagline}</p>
+    <section id="top" className="poster">
+      <div className="poster__photo" aria-hidden="true" />
+      <div className="poster__scrim" aria-hidden="true" />
 
-        <div className="hero__actions">
-          <a href="#projects" className="btn btn--primary">
-            {t("hero.ctaProjects")}
-          </a>
-          <a href="#contact" className="btn btn--ghost">
-            {t("hero.ctaContact")}
-          </a>
+      <div className="poster__inner">
+        {/* <h1 className="poster__hireme">{t("landing.hireMe")}</h1> */}
+        <h1 className="poster__hireme">
+          <svg
+            fill="#fff"
+            viewBox="0 0 22 22"
+            xmlns="http://www.w3.org/2000/svg"
+            id="memory-alpha-h"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path d="M15 1V2H17V3H18V4H19V5H20V7H21V15H20V17H19V18H18V19H17V20H15V21H7V20H5V19H4V18H3V17H2V15H1V7H2V5H3V4H4V3H5V2H7V1H15M14 3H8V4H6V5H5V6H4V8H3V14H4V16H5V17H6V18H8V19H14V18H16V17H17V16H18V14H19V8H18V6H17V5H16V4H14V3M8 6H10V10H12V6H14V16H12V12H10V16H8V6Z"></path>
+            </g>
+          </svg>
+          <svg
+            fill="#fff"
+            viewBox="0 0 22 22"
+            xmlns="http://www.w3.org/2000/svg"
+            id="memory-alpha-i"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path d="M15 1V2H17V3H18V4H19V5H20V7H21V15H20V17H19V18H18V19H17V20H15V21H7V20H5V19H4V18H3V17H2V15H1V7H2V5H3V4H4V3H5V2H7V1H15M14 3H8V4H6V5H5V6H4V8H3V14H4V16H5V17H6V18H8V19H14V18H16V17H17V16H18V14H19V8H18V6H17V5H16V4H14V3M13 6V8H12V14H13V16H9V14H10V8H9V6H13Z"></path>
+            </g>
+          </svg>
+          <svg
+            fill="#fff"
+            viewBox="0 0 22 22"
+            xmlns="http://www.w3.org/2000/svg"
+            id="memory-alpha-r"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path d="M15 1V2H17V3H18V4H19V5H20V7H21V15H20V17H19V18H18V19H17V20H15V21H7V20H5V19H4V18H3V17H2V15H1V7H2V5H3V4H4V3H5V2H7V1H15M14 3H8V4H6V5H5V6H4V8H3V14H4V16H5V17H6V18H8V19H14V18H16V17H17V16H18V14H19V8H18V6H17V5H16V4H14V3M8 6H13L13 7L14 7V11L13 11L13 13H14V16H12V14H11V12H10V16H8V6M10 8V10H12V8H10Z"></path>
+            </g>
+          </svg>
+          <svg
+            fill="#fff"
+            viewBox="0 0 22 22"
+            xmlns="http://www.w3.org/2000/svg"
+            id="memory-alpha-e"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path d="M15 1V2H17V3H18V4H19V5H20V7H21V15H20V17H19V18H18V19H17V20H15V21H7V20H5V19H4V18H3V17H2V15H1V7H2V5H3V4H4V3H5V2H7V1H15M14 3H8V4H6V5H5V6H4V8H3V14H4V16H5V17H6V18H8V19H14V18H16V17H17V16H18V14H19V8H18V6H17V5H16V4H14V3M8 6H14V8H10V10H14V12H10V14H14V16H8V6Z"></path>
+            </g>
+          </svg>
+          <svg
+            fill="#fff"
+            viewBox="0 0 22 22"
+            xmlns="http://www.w3.org/2000/svg"
+            id="memory-alpha-m"
+            className="poster__hireme-m"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path d="M15 1V2H17V3H18V4H19V5H20V7H21V15H20V17H19V18H18V19H17V20H15V21H7V20H5V19H4V18H3V17H2V15H1V7H2V5H3V4H4V3H5V2H7V1H15M14 3H8V4H6V5H5V6H4V8H3V14H4V16H5V17H6V18H8V19H14V18H16V17H17V16H18V14H19V8H18V6H17V5H16V4H14V3M7 6H15L15 7L16 7V16H14V8H12V15H10V8H8V16H6V7L7 7L7 6Z"></path>
+            </g>
+          </svg>
+          <svg
+            fill="#fff"
+            viewBox="0 0 22 22"
+            xmlns="http://www.w3.org/2000/svg"
+            id="memory-alpha-e"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path d="M15 1V2H17V3H18V4H19V5H20V7H21V15H20V17H19V18H18V19H17V20H15V21H7V20H5V19H4V18H3V17H2V15H1V7H2V5H3V4H4V3H5V2H7V1H15M14 3H8V4H6V5H5V6H4V8H3V14H4V16H5V17H6V18H8V19H14V18H16V17H17V16H18V14H19V8H18V6H17V5H16V4H14V3M8 6H14V8H10V10H14V12H10V14H14V16H8V6Z"></path>
+            </g>
+          </svg>
+        </h1>
+
+        <div className="poster__body">
+          <p className="poster__together">{t("landing.together")}</p>
+
+          <p className="poster__name">
+            {t("landing.intro")}
+            <span className="poster__role">{t("landing.role")}</span>
+          </p>
+
+          <p className="poster__apply">
+            <span className="poster__apply-text">{t("landing.apply")}</span>
+            <span className="poster__apply-badge">{t("landing.openTo")}</span>
+          </p>
+
+          <div className="poster__cols">
+            <div className="poster__group">
+              <h2 className="poster__gt">{t("landing.skillsTitle")}</h2>
+              <ul className="poster__list">
+                {skills.map((s) => (
+                  <li key={s}>{s}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="poster__group poster__group--right">
+              <h2 className="poster__gt poster__gt--alt">
+                {t("landing.personalityTitle")}
+              </h2>
+              <ul className="poster__list poster__list--right">
+                {personality.map((p) => (
+                  <li key={p}>{p}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
-      <a href="#about" className="hero__scroll" aria-label={t("hero.scroll")}>
-        <span className="hero__scroll-dot" />
+      <a href="#about" className="poster__scroll" aria-label={t("hero.scroll")}>
+        <span className="poster__scroll-dot" />
       </a>
     </section>
   );
