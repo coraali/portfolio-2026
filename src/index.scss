@@ -853,7 +853,7 @@ $poster-gold: #ffc62b;
 
 .poster {
   position: relative;
-  min-height: calc(100svh - 30px);
+  min-height: 100svh;
   display: flex;
   overflow: hidden;
   /* 沒有照片時的後備：藍天大海漸層 */
