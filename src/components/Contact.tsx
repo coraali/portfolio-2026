@@ -185,11 +185,11 @@ export default function Contact() {
                 xmlns="http://www.w3.org/2000/svg"
                 id="memory-download"
               >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                 <g
                   id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 ></g>
                 <g id="SVGRepo_iconCarrier">
                   <path d="M18 17V19H4V17H18M14 2V8H18V9H17V10H16V11H15V12H14V13H13V14H12V15H10V14H9V13H8V12H7V11H6V10H5V9H4V8H8V2H14M12 4H10V10H9V11H10V12H12V11H13V10H12V4Z"></path>
